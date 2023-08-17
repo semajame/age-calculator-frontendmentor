@@ -1,0 +1,195 @@
+/* # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Purple: hsl(259, 100%, 65%)
+- Light red: hsl(0, 100%, 67%)
+
+### Neutral
+
+- White: hsl(0, 0%, 100%)
+- Off white: hsl(0, 0%, 94%)
+- Light grey: hsl(0, 0%, 86%)
+- Smokey grey: hsl(0, 1%, 44%)
+- Off black: hsl(0, 0%, 8%)
+
+## Typography
+
+### Body Copy
+
+- Font size (inputs): 32px
+
+### Font
+font-family: 'Poppins', sans-serif;
+- Family: [Poppins](https://fonts.google.com/specimen/Poppins)
+- Weights: 400i, 700, 800i */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+
+:root{
+    --Purple: hsl(259, 100%, 65%);
+    --Light-red: hsl(0, 100%, 67%);
+    --White: hsl(0, 0%, 100%);
+    --Off-white: hsl(0, 0%, 94%);
+    --Light-grey: hsl(0, 0%, 86%);
+    --Smokey-grey: hsl(0, 1%, 44%);
+    --Off-black: hsl(0, 0%, 8%);
+}
+
+body{
+    background-color: var(--Off-white);
+    font-family: 'Poppins', sans-serif;
+}
+
+main{
+    box-shadow: 9px 7px 23px -6px rgba(0,0,0,0.1),0px 10px 15px -3px rgba(0,0,0,0.1),0px 0px 43px 10px rgba(0,0,0,0.1);
+    padding: 3rem 0 3rem 3rem;
+    background-color: var(--White);
+    margin: 5rem auto;
+    max-width: 900px;
+    border-radius: 15px 15px 200px 15px;
+}
+
+main .date{
+    display: flex;
+    justify-content: left;
+    gap: 5rem;
+    font-size: 0.925rem;
+    letter-spacing: 0.2rem;
+}
+
+.dateday.active,
+.datemonth.active,
+.dateyear.active{
+    color: var(--Light-red);
+}
+
+.date div{
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--Smokey-grey);
+}
+
+.errday,
+.errmonth,
+.erryear,
+.validday,
+.validmonth,
+.validyear{
+    padding-top: 0.3rem;
+    color: var(--Light-red);
+    font-size: 0.8rem;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: normal;
+    text-transform: none;
+    display: none;
+}
+
+.errday.active,
+.errmonth.active,
+.erryear.active,
+.validday.active,
+.validmonth.active,
+.validyear.active{
+    display: block;
+}  
+
+.date input{
+    max-width: 150px;
+}
+
+input{
+    margin-top: 0.5rem;
+    outline: none;
+    padding: 0.5rem 0.6rem;
+    border-radius: 5px;
+    border: 1px solid rgb(216, 213, 213);
+    font-size: 1.5rem;
+}
+
+input[type="text"]{
+    font-size: 1.5rem;
+}
+
+input::placeholder{
+    opacity: 30%;
+    font-size: 1.3rem;
+}
+
+.line{
+    padding-top: 3rem;
+}
+
+#day:focus,
+#month:focus,
+#year:focus{
+    border: 1px solid var(--Purple);
+}
+
+.horizontal-line{
+    margin: 2rem 0;
+    color: rgb(243, 243, 243);
+    height: 1px;
+    width: 700px;
+}
+
+.image{
+    background-color: var(--Purple);
+    display: inline-block;
+    border-radius: 50%;
+    padding: 1rem;
+    position: relative;
+    left:40rem;
+    margin-top: -5rem;
+}
+
+.image img{
+    width: 67px;
+}
+
+.image:hover{
+    background-color: black;
+    transition: 300ms;
+    cursor: pointer;
+}
+
+.years,
+.months,
+.days{
+    display: flex;
+    font-size: 4.2rem;
+    font-style: italic;
+    align-items: center;
+    color: var(--Off-black);
+    height: 145px;
+}
+
+#day.red,
+#month.red, 
+#year.red{
+    border: 1px solid var(--Light-red);
+}
+
+.years input,
+.months input,
+.days input{
+    padding: 0;
+    border: none;
+    font-size: 8rem;
+    text-align: center;
+    font-weight: 800;
+    max-width: 180px;
+    color: var(--Purple);
+    background-color: transparent;
+}

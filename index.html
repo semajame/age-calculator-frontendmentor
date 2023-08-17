@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- LINKS -->
+    
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/mobile.css">
+
+    <link rel="shortcut icon" href="/assets/images/favicon-32x32.png" type="image/x-icon">
+
+    <title>Age Calculator</title>
+</head>
+<body>
+    <main>
+        <div class="date">
+            <div>
+                <p class="dateday" id="dateday">Day</p>
+                <input type="text" placeholder="DD" id="day" maxlength="2" class="day" onkeypress="return event.charCode >= 32 && event.charCode <= 57">
+                <p class="errday" id="errday">This field is required</p>
+                <p class="validday" id="validday">Must be a valid day</p>
+            </div>
+
+            <div>
+                <p class="datemonth" id="datemonth">Month</p>
+                <input type="text" placeholder="MM" id="month" maxlength="2" onkeypress="return event.charCode >= 32 && event.charCode <= 57">
+                <p class="errmonth" id="errmonth">This field is required</p>
+                <p class="validmonth" id="validmonth">Must be a valid month</p>
+            </div>
+
+            <div>
+                <p class="dateyear" id="dateyear">Year</p>
+                <input type="text" placeholder="YYYY" id="year" maxlength="4" onkeypress="return event.charCode >= 32 && event.charCode <= 57">
+                <p class="validyear" id="validyear">Must be a in the past</p>
+                <p class="erryear" id="erryear">This field is required</p>
+            </div>
+        </div>
+
+        <div class="line">
+            <hr class="horizontal-line">
+                <div class="image" id="imagesend">
+                    <img src="/assets/images/icon-arrow.svg" alt="arrow-icon" class="arrow">
+                </div>
+        </div>
+
+        <div class="year-container">
+            <div class="years">
+                <input type="text" readonly value="--" id="mainyears">
+                <h2>years</h2>
+            </div>
+            <div class="months">
+                <input type="text" readonly value="--" id="mainmonths">
+                <h2>months</h2>
+            </div>
+            <div class="days">
+                <input type="text" readonly value="--" id="maindays">
+                <h2>days</h2>
+            </div>
+        </div>
+    </main>
+</body>
+
+<script src="/script.js"></script>
+</html>
